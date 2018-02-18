@@ -1,3 +1,6 @@
+/* Copyright (C) 2018 Krystal Graylin, Isabel Ovalles - All Rights Reserved
+ */
+
 package com.krysabel.sort;
 import java.io.*;
 import java.util.*;
