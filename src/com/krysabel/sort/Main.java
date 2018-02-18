@@ -56,7 +56,7 @@ public class Main {
 			for(int x = numEntries; x > 0; x--){
 				people.add(username);
 				
-			}
+			} 
 			
 		}
 	}
