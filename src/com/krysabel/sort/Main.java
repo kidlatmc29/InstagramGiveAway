@@ -3,7 +3,8 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-	ArrayList<String> people = new ArrayList<String>();
+	static ArrayList<String> people = new ArrayList<String>();
+	
 	public static void main(String[] args) {
 		Scanner userInput = new Scanner(System.in); 
 		System.out.println("Hello! Welcome to the random raffle picker.");
@@ -44,7 +45,18 @@ public class Main {
 	
 		while (readFile.hasNextLine()) {
 			//parse!!!!
-			String username = readFile.nextLine();
+
+			String line = readFile.nextLine();
+			String[] person = line.split(",");
+			String username = person[0]; 
+			int numEntries = Integer.parseInt(person[1]);
+			
+			//Adding number of username entries based on how many entries the user has
+			//Ex.) user: bob.xD number: 5 - > the username bob.xD will be added 5 times
+			for(int x = numEntries; x > 0; x--){
+				people.add(username);
+				
+			}
 			
 		}
 	}
