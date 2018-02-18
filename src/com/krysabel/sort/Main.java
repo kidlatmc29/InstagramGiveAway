@@ -7,7 +7,6 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner userInput = new Scanner(System.in); 
 		System.out.println("Hello! Welcome to the random raffle picker.");
-		System.out.println("Please enter the name of the file you want to use: ");
 		
 		boolean fileExists = false; 
 		File inputFile = getInputFile(userInput, fileExists);
