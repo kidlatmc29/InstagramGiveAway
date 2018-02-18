@@ -38,5 +38,16 @@ public class Main {
 		}
 		return inputFile;
 	}
+	
+	//puts file contents into ArrayList
+	private static void addNamesToList (File inputFile) throws FileNotFoundException {
+		Scanner readFile = new Scanner (inputFile);
+	
+		while (readFile.hasNextLine()) {
+			//parse!!!!
+			String username = readFile.nextLine();
+			
+		}
+	}
 
 }
