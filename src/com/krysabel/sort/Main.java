@@ -72,13 +72,13 @@ public class Main {
 		//find how many entries
 		int size = people.size();
 		//pick number from 0 to totalEntries - 1
-		int picked = (int) Math.random() * size;
-		//refer to ArrayList and print winner name
-		System.out.println("The giveaway winner is @" + people.get(picked) + " !");
+		int picked = (int) (Math.random() * size);
 		
-	}
-
-	
-	
-	
+		if (picked > people.size()-1) {
+			picked =- picked;
+		}
+		//refer to ArrayList and print winner name
+		System.out.println("Out of a total of " + people.size() + " entries, the giveaway winner is @" + people.get(picked));
+		
+	}	
 }
