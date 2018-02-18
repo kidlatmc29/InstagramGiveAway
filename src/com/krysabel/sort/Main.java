@@ -5,12 +5,16 @@ import java.util.*;
 public class Main {
 	static ArrayList<String> people = new ArrayList<String>();
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		Scanner userInput = new Scanner(System.in); 
 		System.out.println("Hello! Welcome to the random raffle picker.");
 		
 		boolean fileExists = false; 
 		File inputFile = getInputFile(userInput, fileExists);
+		
+		
+		addNamesToList(inputFile);
+		pickWinner();
 	}
 	
 	/**
@@ -54,11 +58,27 @@ public class Main {
 			//Adding number of username entries based on how many entries the user has
 			//Ex.) user: bob.xD number: 5 - > the username bob.xD will be added 5 times
 			for(int x = numEntries; x > 0; x--){
-				people.add(username);
-				
-			} 
+				people.add(username);				
+			}  
 			
 		}
 	}
+	
+	
+	
+	//looking at ArrayList people then randomly picking a winner
+	private static void pickWinner () {
+	
+		//find how many entries
+		int size = people.size();
+		//pick number from 0 to totalEntries - 1
+		int picked = (int) Math.random() * size;
+		//refer to ArrayList and print winner name
+		System.out.println("The giveaway winner is @" + people.get(picked) + " !");
+		
+	}
 
+	
+	
+	
 }
