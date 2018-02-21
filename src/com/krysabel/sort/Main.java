@@ -77,7 +77,7 @@ public class Main {
 		//pick number from 0 to totalEntries - 1
 		int picked = (int) (Math.random() * size);
 		//refer to ArrayList and print winner name
-		System.out.println("The giveaway winner is @" + people.get(picked) + " !");
+		System.out.println("Out of a total of " + people.size() + " entries, the giveaway winner is @" + people.get(picked));
 		
 	}
 
