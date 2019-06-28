@@ -2,12 +2,19 @@ package com.krysabel.sort;
 
 public class User {
 	private String mName;
-	private int mNumberOfEntries; 
+	private int mNumOfEntries; 
 	
-	public User(String name, int numberOfEntries) {
+	public User(String name, int numOfEntries) {
 		mName = name;
-		mNumberOfEntries = numberOfEntries; 
+		mNumOfEntries = numOfEntries; 
 	}
 	
+	public String getName() {
+		return mName; 
+	}
+	
+	public int getNumOfEntries() {
+		return mNumOfEntries;
+	}
 	
 }
